@@ -32,8 +32,8 @@
     Private Sub cbxShape_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxShape.SelectedIndexChanged
         Select Case cbxShape.Text
             Case "Special"
-                cbxStyles.Items.Add("Star Shape")
-                cbxStyles.Items.Add("Wavy Border")
+                cbxShape.Items.Add("Star Shape")
+                cbxShape.Items.Add("Wavy Border")
         End Select
     End Sub
 End Class
