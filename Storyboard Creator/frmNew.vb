@@ -1,4 +1,6 @@
 ﻿Public Class frmCreator
+    Dim storyboard As Storyboard = New Storyboard()
+
     Private Sub btnNewFile_Click(sender As Object, e As EventArgs) Handles btnNewFile.Click
         If MessageBox.Show("Are you sure you want to create a new file?", "New File",
          MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
@@ -23,5 +25,10 @@
 
     Private Sub btnSupport_Click(sender As Object, e As EventArgs) Handles btnSupport.Click
         System.Diagnostics.Process.Start("https://github.com/Noswaith/noswaiths-projects/blob/master/storyboard-paneller/documentation/new")
+    End Sub
+
+    Private Sub pnlCanvas_Paint(sender As Object, e As PaintEventArgs) Handles pnlCanvas.Paint
+        Dim gfx As Graphics = pnlCanvas.CreateGraphics()
+        storyboard.DrawRectangles(gfx)
     End Sub
 End Class

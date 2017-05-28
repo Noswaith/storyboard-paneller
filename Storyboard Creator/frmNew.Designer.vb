@@ -29,6 +29,7 @@ Partial Class frmCreator
         Me.btnOpen = New System.Windows.Forms.Button()
         Me.btnReturn = New System.Windows.Forms.Button()
         Me.btnNewFile = New System.Windows.Forms.Button()
+        Me.pnlCanvas = New System.Windows.Forms.Panel()
         Me.grpFile.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -96,6 +97,17 @@ Partial Class frmCreator
         Me.btnNewFile.TabIndex = 1
         Me.btnNewFile.UseVisualStyleBackColor = True
         '
+        'pnlCanvas
+        '
+        Me.pnlCanvas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pnlCanvas.ImeMode = System.Windows.Forms.ImeMode.[On]
+        Me.pnlCanvas.Location = New System.Drawing.Point(12, 69)
+        Me.pnlCanvas.Name = "pnlCanvas"
+        Me.pnlCanvas.Size = New System.Drawing.Size(896, 964)
+        Me.pnlCanvas.TabIndex = 1
+        '
         'frmCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -103,7 +115,8 @@ Partial Class frmCreator
         Me.AutoScroll = True
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(982, 1045)
+        Me.ClientSize = New System.Drawing.Size(920, 1045)
+        Me.Controls.Add(Me.pnlCanvas)
         Me.Controls.Add(Me.grpFile)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCreator"
@@ -119,4 +132,5 @@ Partial Class frmCreator
     Friend WithEvents btnOpen As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents btnSupport As Button
+    Friend WithEvents pnlCanvas As Panel
 End Class
