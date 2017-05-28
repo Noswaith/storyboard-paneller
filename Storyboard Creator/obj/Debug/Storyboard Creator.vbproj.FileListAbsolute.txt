@@ -18,9 +18,9 @@ C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Stor
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\bin\Debug\Storyboard Creator.exe
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\bin\Debug\Storyboard Creator.pdb
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\bin\Debug\Storyboard Creator.xml
-C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard Creator.vbprojResolveAssemblyReference.cache
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard_Creator.frmCreator.resources
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard_Creator.frmMenu.resources
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard_Creator.frmToolbox.resources
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard_Creator.Resources.resources
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard Creator.vbproj.GenerateResource.Cache
+C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard Creator.vbprojResolveAssemblyReference.cache
