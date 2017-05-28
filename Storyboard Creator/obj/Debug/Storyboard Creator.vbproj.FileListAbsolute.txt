@@ -1,0 +1,13 @@
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\bin\Debug\Storyboard Creator.exe.config
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\bin\Debug\Storyboard Creator.exe
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\bin\Debug\Storyboard Creator.pdb
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\bin\Debug\Storyboard Creator.xml
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\obj\Debug\Storyboard Creator.vbprojResolveAssemblyReference.cache
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\obj\Debug\Storyboard_Creator.Resources.resources
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\obj\Debug\Storyboard Creator.vbproj.GenerateResource.Cache
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\obj\Debug\Storyboard Creator.exe
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\obj\Debug\Storyboard Creator.xml
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\obj\Debug\Storyboard Creator.pdb
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\obj\Debug\Storyboard_Creator.frmCreator.resources
+c:\users\aron\documents\visual studio 2017\Projects\Storyboard Creator\Storyboard Creator\obj\Debug\Storyboard_Creator.frmMenu.resources
+C:\Users\Aron\Documents\Visual Studio 2017\Projects\Storyboard Creator\Storyboard Creator\obj\Debug\Storyboard_Creator.frmToolbox.resources
