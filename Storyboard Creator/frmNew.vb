@@ -1,7 +1,7 @@
 ﻿Public Class frmCreator
     Dim storyboard As Storyboard = New Storyboard()
     Dim mouseIsdown As Boolean = False
-    Dim selectedRectangle As Rectangle
+    Dim selectedRectangle As Integer
     Dim mouseOffset As Point
     Dim canvasGraphics As Graphics
 
@@ -14,6 +14,7 @@
             Me.Close()
         End If
     End Sub
+
     Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
         'I think it is awfully bold of you to suggest I know how to code a load/save function.
     End Sub
@@ -38,29 +39,48 @@
     End Sub
 
     Private Sub PictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
-        Dim rect As Rectangle = storyboard.GetRectangleAtPoint(New Point(e.X, e.Y))
+        Dim rectIndex As Integer = storyboard.GetRectangleAtPoint(New Point(e.X, e.Y))
+
 
         ' If there is a rectangle under this cursor
-        If Not IsNothing(rect) Then
+        If Not rectIndex = -1 Then
+            Dim rect As Rectangle = storyboard.rectangles(rectIndex)
             mouseIsdown = True
-            selectedRectangle = rect
-            rect.X += 10
+            selectedRectangle = rectIndex
             mouseOffset = New Point(e.X - rect.X, e.Y - rect.Y)
         End If
     End Sub
 
     Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
-        If mouseIsdown And Not IsNothing(selectedRectangle) Then
-            selectedRectangle.X = e.X
-            selectedRectangle.Y = e.Y
-            PictureBox1.Refresh()
+        If mouseIsdown And Not selectedRectangle = -1 Then
+            Dim rect As Rectangle = storyboard.rectangles(selectedRectangle)
+            rect.X = e.X - mouseOffset.X
+            rect.Y = e.Y - mouseOffset.Y
 
+            ' Keep the rectangle bounded within the window
+            If rect.X + rect.Width > PictureBox1.Width - 5 Then
+                rect.X = PictureBox1.Width - rect.Width - 5
+            End If
 
+            If rect.X < 5 Then
+                rect.X = 5
+            End If
 
+            If rect.Y < 5 Then
+                rect.Y = 5
+            End If
+
+            If rect.Y + rect.Height > PictureBox1.Height - 5 Then
+                rect.Y = PictureBox1.Height - rect.Height - 5
+            End If
+
+            storyboard.rectangles(selectedRectangle) = rect
+            Me.Refresh()
         End If
     End Sub
 
     Private Sub PictureBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseUp
         mouseIsdown = False
+        selectedRectangle = -1
     End Sub
 End Class

@@ -2,7 +2,7 @@
 
 Public Class Storyboard
     ' List of rectangles
-    Dim rectangles As List(Of Rectangle) = New List(Of Rectangle)
+    Public Dim rectangles As List(Of Rectangle) = New List(Of Rectangle)
 
     Public Sub New()
         rectangles.Add(New Rectangle(0, 0, 200, 100))
@@ -12,14 +12,14 @@ Public Class Storyboard
     End Sub
 
     ' Get rectangle at a specified point
-    Public Function GetRectangleAtPoint(point As Point) As Rectangle
+    Public Function GetRectangleAtPoint(point As Point) As Integer
         For Each rectangle As Rectangle In rectangles
             If rectangle.Contains(point) Then
-                Return rectangle
+                Return rectangles.IndexOf(rectangle)
             End If
         Next
 
-        Exit Function
+        Return -1
     End Function
 
 
