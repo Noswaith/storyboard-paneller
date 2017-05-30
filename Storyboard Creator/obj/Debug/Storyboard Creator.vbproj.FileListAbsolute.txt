@@ -23,4 +23,3 @@ C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Stor
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard_Creator.frmToolbox.resources
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard_Creator.Resources.resources
 C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard Creator.vbproj.GenerateResource.Cache
-C:\Users\josh\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard Creator.vbprojResolveAssemblyReference.cache
