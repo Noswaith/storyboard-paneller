@@ -75,7 +75,7 @@
             End If
 
             storyboard.rectangles(selectedRectangle) = rect
-            Me.Refresh()
+            PictureBox1.Refresh()
         End If
     End Sub
 
