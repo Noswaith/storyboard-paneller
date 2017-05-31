@@ -11,14 +11,8 @@
     End Sub
 
     Private Sub frmToolbox_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If cbxShape.Text = "" Then
-            cbxStyles.Visible = False
-            lblStyles.Visible = False
-        Else
-            cbxStyles.Visible = True
-            lblStyles.Visible = True
-        End If
-
+        cbxStyles.Visible = False
+        lblStyles.Visible = False
     End Sub
 
     Private Sub btnCustom_Click(sender As Object, e As EventArgs) Handles btnCustom.Click
@@ -30,10 +24,13 @@
     End Sub
 
     Private Sub cbxShape_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxShape.SelectedIndexChanged
-        Select Case cbxShape.Text
-            Case "Special"
-                cbxShape.Items.Add("Star Shape")
-                cbxShape.Items.Add("Wavy Border")
-        End Select
+        If cbxShape.Text <> "" Then
+            cbxStyles.Visible = True
+            lblStyles.Visible = True
+        End If
+    End Sub
+
+    Private Sub cbxStyles_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxStyles.SelectedIndexChanged
+
     End Sub
 End Class

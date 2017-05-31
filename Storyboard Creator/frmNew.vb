@@ -1,4 +1,6 @@
 ﻿Public Class frmCreator
+    Dim CanvasWidth As Integer = picCanvas.Size.Width 'Problem line - Causes an error.
+    Dim CanvasHeight As Integer = picCanvas.Size.Height 'Problem line - Causes an error.
     Dim storyboard As Storyboard = New Storyboard()
     Dim mouseIsdown As Boolean = False
     Dim selectedRectangle As Integer
@@ -33,14 +35,13 @@
     End Sub
 
 
-    Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint
+    Private Sub picCanvas_Paint(sender As Object, e As PaintEventArgs) Handles picCanvas.Paint
         e.Graphics.Clear(Color.White)
         storyboard.DrawRectangles(e.Graphics)
     End Sub
 
-    Private Sub PictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
+    Private Sub picCanvas_MouseDown(sender As Object, e As MouseEventArgs) Handles picCanvas.MouseDown
         Dim rectIndex As Integer = storyboard.GetRectangleAtPoint(New Point(e.X, e.Y))
-
 
         ' If there is a rectangle under this cursor
         If Not rectIndex = -1 Then
@@ -51,15 +52,15 @@
         End If
     End Sub
 
-    Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
+    Private Sub picCanvas_MouseMove(sender As Object, e As MouseEventArgs) Handles picCanvas.MouseMove
         If mouseIsdown And Not selectedRectangle = -1 Then
             Dim rect As Rectangle = storyboard.rectangles(selectedRectangle)
             rect.X = e.X - mouseOffset.X
             rect.Y = e.Y - mouseOffset.Y
 
             ' Keep the rectangle bounded within the window
-            If rect.X + rect.Width > PictureBox1.Width - 5 Then
-                rect.X = PictureBox1.Width - rect.Width - 5
+            If rect.X + rect.Width > picCanvas.Width - 5 Then
+                rect.X = picCanvas.Width - rect.Width - 5
             End If
 
             If rect.X < 5 Then
@@ -70,17 +71,33 @@
                 rect.Y = 5
             End If
 
-            If rect.Y + rect.Height > PictureBox1.Height - 5 Then
-                rect.Y = PictureBox1.Height - rect.Height - 5
+            If rect.Y + rect.Height > picCanvas.Height - 5 Then
+                rect.Y = picCanvas.Height - rect.Height - 5
             End If
 
             storyboard.rectangles(selectedRectangle) = rect
-            PictureBox1.Refresh()
+            picCanvas.Refresh()
         End If
     End Sub
 
-    Private Sub PictureBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseUp
+    Private Sub picCanvas_MouseUp(sender As Object, e As MouseEventArgs) Handles picCanvas.MouseUp
         mouseIsdown = False
         selectedRectangle = -1
     End Sub
+
+    Private Sub frmCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Select Case frmToolbox.cbxTemplates.Text
+            Case "Dragon Fiction Publishing - Ceidwaid"
+                CanvasWidth = 800
+                CanvasHeight = 1120
+        End Select
+    End Sub
+
+    Public Sub DrawMargain(ByVal e As PaintEventArgs)
+
+        Dim MargainPen As New Pen(Color.Red, frmToolbox.nudMarginSize.Value)
+        Dim Margain As New Rectangle(frmToolbox.nudMarginDistance.Value, frmToolbox.nudMarginDistance.Value, CanvasWidth, CanvasHeight)
+        e.Graphics.DrawRectangle(MargainPen, Margain)
+    End Sub
+
 End Class

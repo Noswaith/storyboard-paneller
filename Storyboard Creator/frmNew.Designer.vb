@@ -29,9 +29,9 @@ Partial Class frmCreator
         Me.btnOpen = New System.Windows.Forms.Button()
         Me.btnReturn = New System.Windows.Forms.Button()
         Me.btnNewFile = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picCanvas = New System.Windows.Forms.PictureBox()
         Me.grpFile.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picCanvas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'grpFile
@@ -98,16 +98,13 @@ Partial Class frmCreator
         Me.btnNewFile.TabIndex = 1
         Me.btnNewFile.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'picCanvas
         '
-        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Location = New System.Drawing.Point(7, 69)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(901, 964)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
+        Me.picCanvas.Location = New System.Drawing.Point(7, 69)
+        Me.picCanvas.Name = "picCanvas"
+        Me.picCanvas.Size = New System.Drawing.Size(901, 964)
+        Me.picCanvas.TabIndex = 1
+        Me.picCanvas.TabStop = False
         '
         'frmCreator
         '
@@ -117,13 +114,13 @@ Partial Class frmCreator
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(920, 1045)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.picCanvas)
         Me.Controls.Add(Me.grpFile)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCreator"
         Me.Text = "Storyboard Creator - New"
         Me.grpFile.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picCanvas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -134,5 +131,5 @@ Partial Class frmCreator
     Friend WithEvents btnOpen As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents btnSupport As Button
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picCanvas As PictureBox
 End Class
