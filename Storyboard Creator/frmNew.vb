@@ -1,11 +1,13 @@
 ﻿Public Class frmCreator
     Dim CanvasWidth As Integer = 0
     Dim CanvasHeight As Integer = 0
-    Dim storyboard As Storyboard = New Storyboard()
+    Public storyboard As Storyboard = New Storyboard()
     Dim mouseIsdown As Boolean = False
     Dim selectedRectangle As Integer
     Dim mouseOffset As Point
     Dim canvasGraphics As Graphics
+    Public MarginWidth As Integer
+    Public MarginHeight As Integer
 
     Private Sub btnNewFile_Click(sender As Object, e As EventArgs) Handles btnNewFile.Click
         If MessageBox.Show("Are you sure you want to create a new file?", "New File",
@@ -38,6 +40,9 @@
     Private Sub picCanvas_Paint(sender As Object, e As PaintEventArgs) Handles picCanvas.Paint
         e.Graphics.Clear(Color.White)
         storyboard.DrawRectangles(e.Graphics)
+        storyboard.GetWidthMargin = MarginWidth
+        storyboard.GetHeightMargin = MarginHeight
+
     End Sub
 
     Private Sub picCanvas_MouseDown(sender As Object, e As MouseEventArgs) Handles picCanvas.MouseDown
@@ -90,6 +95,9 @@
         CanvasHeight = picCanvas.Height
 
 
+
+
+
         Select Case frmToolbox.cbxTemplates.Text
             Case "Dragon Fiction Publishing - Ceidwaid"
                 picCanvas.Width = 800
@@ -99,5 +107,4 @@
                 picCanvas.Height = 2240
         End Select
     End Sub
-
 End Class

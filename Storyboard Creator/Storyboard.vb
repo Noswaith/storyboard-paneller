@@ -5,10 +5,10 @@ Public Class Storyboard
     Public rectangles As List(Of Rectangle) = New List(Of Rectangle)
     Public margins As List(Of Rectangle) = New List(Of Rectangle)
 
-    Dim MarginWidth As Integer
-    Dim MarginHeight As Integer
-    Dim MarginFirstPos As Integer
-    Dim MarginSecondPos As Integer
+    Public MarginWidth As Integer
+    Public MarginHeight As Integer
+    Public MarginFirstPos As Integer
+    Public MarginSecondPos As Integer
 
     Public Property GetMarginFirstPos As Integer
         Get
@@ -37,7 +37,7 @@ Public Class Storyboard
         End Set
     End Property
 
-    Public Property GetMarginHeight As Integer
+    Public Property GetHeightMargin As Integer
         Get
             Return MarginHeight
         End Get
@@ -84,7 +84,5 @@ Public Class Storyboard
         Next
 
     End Sub
-
-
 
 End Class

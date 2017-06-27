@@ -43,4 +43,16 @@
     Private Sub cbxStyles_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxStyles.SelectedIndexChanged
 
     End Sub
+
+    Public Sub nudMarginDistance_ValueChanged(sender As Object, e As EventArgs) Handles nudMarginDistance.ValueChanged
+        frmCreator.storyboard.GetWidthMargin = nudMarginDistance.Value
+        frmCreator.storyboard.GetHeightMargin = nudMarginDistance.Value
+        MsgBox("Test")
+    End Sub
+
+    Public Sub nudMarginSize_ValueChanged(sender As Object, e As EventArgs) Handles nudMarginSize.ValueChanged
+
+    End Sub
+
+
 End Class
