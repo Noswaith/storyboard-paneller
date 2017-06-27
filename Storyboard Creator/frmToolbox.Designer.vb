@@ -159,7 +159,7 @@ Partial Class frmToolbox
         Me.cbxTemplates.Location = New System.Drawing.Point(81, 15)
         Me.cbxTemplates.Name = "cbxTemplates"
         Me.cbxTemplates.Size = New System.Drawing.Size(485, 24)
-        Me.cbxTemplates.TabIndex = 1
+        Me.cbxTemplates.TabIndex = 0
         '
         'nudVertical
         '
@@ -266,7 +266,7 @@ Partial Class frmToolbox
         Me.cbxShape.Location = New System.Drawing.Point(71, 18)
         Me.cbxShape.Name = "cbxShape"
         Me.cbxShape.Size = New System.Drawing.Size(121, 24)
-        Me.cbxShape.TabIndex = 0
+        Me.cbxShape.TabIndex = 1
         '
         'lblStyles
         '

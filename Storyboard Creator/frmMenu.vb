@@ -1,7 +1,8 @@
 ﻿Public Class frmMenu
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
-        frmCreator.Show()
         frmToolbox.Show()
+        System.Threading.Thread.Sleep(1000)
+        frmCreator.Show()
         Me.Hide()
         'Me.Close()
     End Sub

@@ -1,6 +1,6 @@
 ﻿Public Class frmCreator
-    Dim CanvasWidth As Integer = picCanvas.Size.Width 'Problem line - Causes an error.
-    Dim CanvasHeight As Integer = picCanvas.Size.Height 'Problem line - Causes an error.
+    Dim CanvasWidth As Integer = 0
+    Dim CanvasHeight As Integer = 0
     Dim storyboard As Storyboard = New Storyboard()
     Dim mouseIsdown As Boolean = False
     Dim selectedRectangle As Integer
@@ -86,18 +86,18 @@
     End Sub
 
     Private Sub frmCreator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CanvasWidth = picCanvas.Width
+        CanvasHeight = picCanvas.Height
+
+
         Select Case frmToolbox.cbxTemplates.Text
             Case "Dragon Fiction Publishing - Ceidwaid"
-                CanvasWidth = 800
-                CanvasHeight = 1120
+                picCanvas.Width = 800
+                picCanvas.Height = 1120
+            Case "Dragon Fiction Publishing - Ceidwaid Double Page"
+                picCanvas.Width = 1600
+                picCanvas.Height = 2240
         End Select
-    End Sub
-
-    Public Sub DrawMargain(ByVal e As PaintEventArgs)
-
-        Dim MargainPen As New Pen(Color.Red, frmToolbox.nudMarginSize.Value)
-        Dim Margain As New Rectangle(frmToolbox.nudMarginDistance.Value, frmToolbox.nudMarginDistance.Value, CanvasWidth, CanvasHeight)
-        e.Graphics.DrawRectangle(MargainPen, Margain)
     End Sub
 
 End Class

@@ -7,10 +7,20 @@
                 nudPanelThickness.Value = 4
                 nudMarginDistance.Value = 10
                 nudMarginSize.Value = 1
+            Case "Dragon Fiction Publishing - Ceidwaid Double Page"
+                nudVertical.Value = 10
+                nudHorizontal.Value = 7
+                nudPanelThickness.Value = 4
+                nudMarginDistance.Value = 10
+                nudMarginSize.Value = 1
         End Select
     End Sub
 
     Private Sub frmToolbox_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If cbxTemplates.Items.Count > 0 Then
+            cbxTemplates.SelectedIndex = 0
+        End If
+
         cbxStyles.Visible = False
         lblStyles.Visible = False
     End Sub

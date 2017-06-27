@@ -100,6 +100,7 @@ Partial Class frmCreator
         '
         'picCanvas
         '
+        Me.picCanvas.BackgroundImage = CType(resources.GetObject("picCanvas.BackgroundImage"), System.Drawing.Image)
         Me.picCanvas.Location = New System.Drawing.Point(7, 69)
         Me.picCanvas.Name = "picCanvas"
         Me.picCanvas.Size = New System.Drawing.Size(901, 964)
