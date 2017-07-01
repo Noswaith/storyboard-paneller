@@ -36,3 +36,4 @@ C:\Users\Aron\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Stor
 C:\Users\Aron\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard Creator.xml
 C:\Users\Aron\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard Creator.pdb
 C:\Users\Aron\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard Creator.vbprojResolveAssemblyReference.cache
+C:\Users\Aron\Source\Repos\storyboard-paneller\Storyboard Creator\obj\Debug\Storyboard_Creator.frmCustom.resources

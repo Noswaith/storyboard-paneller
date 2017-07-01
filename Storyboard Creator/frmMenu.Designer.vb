@@ -95,9 +95,9 @@ Partial Class frmMenu
         Me.lblVersionNumber.AutoSize = True
         Me.lblVersionNumber.Location = New System.Drawing.Point(339, 264)
         Me.lblVersionNumber.Name = "lblVersionNumber"
-        Me.lblVersionNumber.Size = New System.Drawing.Size(51, 17)
+        Me.lblVersionNumber.Size = New System.Drawing.Size(39, 17)
         Me.lblVersionNumber.TabIndex = 1
-        Me.lblVersionNumber.Text = "v.0.7.2"
+        Me.lblVersionNumber.Text = "v.0.8"
         Me.lblVersionNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmMenu

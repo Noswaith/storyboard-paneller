@@ -26,7 +26,7 @@
     End Sub
 
     Private Sub btnCustom_Click(sender As Object, e As EventArgs) Handles btnCustom.Click
-        MsgBox("This function is under development. We're sorry about that!")
+        frmCustom.Show()
     End Sub
 
     Private Sub btnSupport_Click(sender As Object, e As EventArgs) Handles btnSupport.Click
@@ -47,7 +47,6 @@
     Public Sub nudMarginDistance_ValueChanged(sender As Object, e As EventArgs) Handles nudMarginDistance.ValueChanged
         frmCreator.storyboard.GetWidthMargin = nudMarginDistance.Value
         frmCreator.storyboard.GetHeightMargin = nudMarginDistance.Value
-        MsgBox("Test")
     End Sub
 
     Public Sub nudMarginSize_ValueChanged(sender As Object, e As EventArgs) Handles nudMarginSize.ValueChanged

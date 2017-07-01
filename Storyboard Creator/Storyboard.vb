@@ -33,7 +33,7 @@ Public Class Storyboard
             Return MarginWidth
         End Get
         Set(ByVal value As Integer)
-            MarginWidth = frmCreator.picCanvas.Width - frmToolbox.nudMarginDistance.Value
+            'MarginWidth = frmCreator.picCanvas.Width - frmToolbox.nudMarginDistance.Value
         End Set
     End Property
 
@@ -42,7 +42,7 @@ Public Class Storyboard
             Return MarginHeight
         End Get
         Set(ByVal value As Integer)
-            MarginHeight = frmCreator.picCanvas.Height - frmToolbox.nudMarginDistance.Value
+            'MarginHeight = frmCreator.picCanvas.Height - frmToolbox.nudMarginDistance.Value
         End Set
     End Property
 
