@@ -24,7 +24,7 @@
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         'Clears image.
-        picCustomPanel.Image = Nothing
+        picCustomPanel.Invalidate()
         PNL = Nothing
         'Clears horizontal input.
         nudX1.Value = 1
